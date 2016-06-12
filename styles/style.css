@@ -1,0 +1,81 @@
+@font-face{
+	font-family: 'perspect';
+	src: url('Perspect.tff');
+	src: url('Perspect.ttf')  format('truetype');
+}
+
+html { 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center; 
+  overflow: hidden;
+}
+
+body{
+	font-family: 'perspect', sans-serif;
+	font-color: limegreen;
+}
+
+/*#container{
+	position: fixed;
+	min-width: 100%;
+	min-height: 100%;
+	top: 0;
+	left: 0;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}*/
+
+#number-format, #hex-format{
+	position: absolute;
+	font-size: 7em;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%,-50%);
+	color: snow;
+}
+
+#progress-bar{
+	position: absolute;
+	top: 70%;
+	right: 50%;
+	/*margin-top: 60%;*/
+	height: 3px;
+	max-width: 100%;
+	background: snow;
+	border-radius: 2px;
+	border: 1px solid #ddd;
+	transition: 0.5s all ease;
+	transform: translate(50%,-50%);
+}
+
+/*#clock{
+	position: relative;
+	width: 25%;
+	height: 15%;
+	margin: 22.2% auto;
+}*/
+
+#clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#hex-format{
+	opacity: 0;
+}
+
+#clock:hover #number-format{
+	opacity: 0;
+}
+#clock:hover #hex-format{
+	opacity: 1;
+}
